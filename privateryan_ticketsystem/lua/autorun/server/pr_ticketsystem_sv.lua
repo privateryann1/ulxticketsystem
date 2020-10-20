@@ -7,7 +7,7 @@ util.AddNetworkString("PR_TicketSystem.Hide")
 util.AddNetworkString("PR_TicketSystem.Canceled")
 
 local function hasPerm(ply)
-    if ply:query("ulx asay") then
+    if ply:query("ulx seeasay") then
         return true
     end
 end
