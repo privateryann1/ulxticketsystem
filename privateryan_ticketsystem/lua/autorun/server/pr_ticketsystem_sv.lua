@@ -15,7 +15,7 @@ end
 function PR_TicketSystem.Chat(ply,text)
     if string.StartWith(text,"#") and !string.find(string.lower(text),"#cancel") then
         if ply:GetNWBool("pr_ticketsystem_active", false) then
-            ply:ChatPrint("You already have a ticket open. Write '#cancel' to cancel your current ticket.")
+            ply:ChatPrint("You already have a ticket open.")
         return "" end
         ply:SetNWBool("pr_ticketsystem_active", true)
         ply:ChatPrint("You have opened a ticket, a staff member will be with you shortly.")
