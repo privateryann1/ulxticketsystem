@@ -133,7 +133,7 @@ local function drawOutlinedBox(x, y, w, h, thickness, clr)
 end
 
 function PR_TicketSystem.CreateWindow(caller,text)
-    if !caller:IsValid() then return end
+    --if !caller:IsValid() then return end
     if !caller:IsPlayer() then return end
     local color_unclaim_wt = Color(255,255,255,100)
     local color_unclaim_wt2 = Color(255,255,255,70)

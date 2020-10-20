@@ -28,7 +28,7 @@ function PR_TicketSystem.Chat(ply,text)
             end
         end
     return "" end
-    if string.lower(text) == "#cancel" then
+    --[[if string.lower(text) == "#cancel" then
         if !ply:GetNWBool("pr_ticketsystem_active", false) then
             ply:ChatPrint("You do not have a ticket open.")
         return "" end
@@ -36,15 +36,15 @@ function PR_TicketSystem.Chat(ply,text)
             if hasPerm(ply) then
                 net.Start("PR_TicketSystem.Cancel")
                     net.WriteEntity(ply)
-                net.Send(v)
+                net.Broadcast()
             end
         end
     return "" end
-    --[[if string.lower(text) == "/cleartickets" then
+    if string.lower(text) == "/cleartickets" then
         for k,v in pairs(player.GetAll()) do
             v:SetNWBool("pr_ticketsystem_active", false)
         end
-    return "" end]]
+    return "" end ]]
 end
 hook.Add("PlayerSay", "PR_TicketSystemChat", PR_TicketSystem.Chat)
 --[[
